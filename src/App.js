@@ -1,4 +1,8 @@
+import { Col, Container, Row } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ContactForm from './component/ContactForm';
+import ContactList from './component/ContactList';
 
 // 1. 왼쪽 : 연락처를 등록하는 폼
 // 2. 오른쪽 : 연락처 리스트, 검색 창
@@ -10,6 +14,16 @@ function App() {
   return (
     <div>
       <h1 className='title'>Phone Book</h1>
+      <Container>
+        <Row>
+          <Col>
+            <ContactForm/>
+          </Col>
+          <Col>
+            <ContactList/>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
